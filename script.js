@@ -29,6 +29,7 @@ const searchCity = async () => {
   
 const showWeatherData = (weatherData) => {
     console.log(weatherData)
+    document.getElementById("error-message").innerText = weatherData.message
     document.getElementById("city-name").innerText = weatherData.name
     document.getElementById("weather-type").innerText = weatherData.weather[0].main
     document.getElementById("temp").innerText = weatherData.main.temp
